@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;300;400;500;600;700;800;900&display=swap");
+.contacto {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  font-family: "Yusei Magic", sans-serif;
+  color: #fff;
+  background: #373b44; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    rgb(66, 134, 244, 0.7),
+    rgb(55, 59, 68, 0.7)
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+      to right,
+      rgb(66, 134, 244, 0.7),
+      rgb(55, 59, 68, 0.7)
+    ),
+    url(https://i.blogs.es/133d4c/thedz0/450_1000.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.contact_form {
+    margin:0  auto;
+  font-family: "Yusei Magic", sans-serif;
+  width: 460px;
+  height: auto;
+  border-radius: 10px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  background-color: #fbfbfb;
+  padding-left: 30px;
+}
+
+input {
+  background-color: #fbfbfb;
+  width: 408px;
+  height: 40px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ab4493;
+  margin-top: 10px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+textarea {
+  background-color: #fbfbfb;
+  width: 405px;
+  height: 150px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ab4493;
+  margin-top: 10px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  padding-top: 15px;
+}
+
+label {
+  display: block;
+  float: center;
+}
+
+button {
+  height: 45px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  background-color: #ab4493;
+  border-color: #ab4493;
+  border-style: solid;
+  border-radius: 10px;
+  width: 420px;
+  cursor: pointer;
+}
+
+button p {
+  color: #fff;
+}
+
+span {
+  color: #ab4493;
+}
+
+.aviso {
+  font-size: 13px;
+  color: #0e0e0e;
+}
+
+h1 {
+  font-size: 39px;
+  text-align: letf;
+  padding-bottom: 20px;
+  color: #ab4493;
+}
+
+h3 {
+  font-size: 16px;
+  padding-bottom: 30px;
+  color: #0e0e0e;
+}
+
+p {
+  font-size: 14px;
+  color: #0e0e0e;
+}
+
+::-webkit-input-placeholder {
+  color: #a8a8a8;
+}
+
+::-webkit-textarea-placeholder {
+  color: #a8a8a8;
+}
+
+.formulario input:focus {
+  outline: 0;
+  border: 1px solid #97d848;
+}
+
+.formulario textarea:focus {
+  outline: 0;
+  border: 1px solid #97d848;
+}

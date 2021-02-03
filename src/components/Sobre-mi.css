@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;300;400;500;600;700;800;900&display=swap");
+.sobre-mi {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  font-family: "Yusei Magic", sans-serif;
+  color: #fff;
+  background: #373b44; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    rgb(66, 134, 244, 0.7),
+    rgb(55, 59, 68, 0.7)
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+      to right,
+      rgb(66, 134, 244, 0.7),
+      rgb(55, 59, 68, 0.7)
+    ),
+    url(https://i.pinimg.com/originals/04/bb/1e/04bb1ec93c6c223aa61e1479435bb6e7.png); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.sobre-mi .texts {
+  margin-top: 8rem;
+  max-width: 1100px;
+}
+
+.sobre-mi h2 {
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 55px;
+  color: black;
+}
+.sobre-mi h3 {
+  font-size: 25px;
+  text-decoration: underline;
+}
+.sobre-mi p {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.logo {
+  width: 150px;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+
+.row {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  padding: 25px;
+  display: flex;
+  flex-direction: row;
+}
+
+.row .col-8 {
+  width: 70%;
+}
+.row .col-4 {
+  width: 10%;
+  margin-top: 10%;
+}
+
+.row .col-4 nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: right;
+}
+
+.h3 {
+  text-decoration: none !important;
+}
+
+.categorias-habilidades {
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.habilidades .categorias-habilidades .categoria {
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  padding: 15px;
+  margin: 20px 20px;
+}
+
+.habilidades .categorias-habilidades .categoria:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.habilidades .categorias-habilidades .categoria ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.icon-sec {
+  padding: 10px;
+  background-color: #373b44;
+}
+
+.row .col-4 nav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+}
+.row .col-4 nav a:hover {
+  text-decoration: underline;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: var(--background);
+  display: block;
+  width: 300px;
+  min-height: 90px;
+  border: 3px solid var(--primary);
+  padding: 15px;
+  margin: calc(15vh - 30px) auto 0 auto;
+  box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--green),
+    20px -20px 0 -3px var(--background), 20px -20px var(--yellow),
+    30px -30px 0 -3px var(--background), 30px -30px var(--orange),
+    40px -40px 0 -3px var(--background), 40px -40px var(--red);
+  transition: box-shadow 1s, top 1s, left 1s;
+  position: relative;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card:hover {
+  top: -40px;
+  left: 40px;
+  box-shadow: 0 0 0 -3px var(--background), 0 0 0 0 var(--green),
+    0 0 0 -3px var(--background), 0 0 0 0 var(--yellow),
+    0 0 0 -3px var(--background), 0 0 0 0 var(--orange),
+    0 0 0 -3px var(--background), 0 0 0 0 var(--red);
+}
+:root {
+  --primary: #555bff;
+  --secondary: #22d2a0;
+  --background: white;
+  --green: #1fc11b;
+  --yellow: #ffd913;
+  --orange: #ff9c55;
+  --red: #ff5555;
+}
+
+.card p {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card a,.lugar_curso {
+  text-decoration: none;
+  text-align: center;
+  color: #000;
+  font-size: 18px;
+  font-family: "Archivo Black", "Archivo", sans-serif;
+  font-weight: normal;
+}
+.card a:hover,.lugar_curso:hover {
+  text-decoration: underline;
+}
+
+h5,
+h4,
+.lugar_curso {
+  color: #000;
+}
+
+.curso_link {
+  font-family: "Big Shoulders Display", cursive;
+}
+
+@media only screen and (max-width:768px) {
+  .row .col-4 nav a{
+    font-size: 15px;
+  }
+}
+
+
+@media only screen and (max-width:425px) {
+  .row{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .row .col-4,.row .col-8{
+    width: 100%;
+  }
+  .row .col-4{
+    margin-top: 25%;
+    font-size: 12px;
+  }
+  .row .col-4 nav{
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .row .col-4 nav a{
+    font-size: 25px;
+    margin-right: 10px;
+  }
+
+  .row .col-8{
+    margin-top: -20%;
+  }
+}

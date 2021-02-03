@@ -1,23 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+import Portfolio from './components/Portfolio';
+import SobreMi from "./components/Sobre-mi";
+import Contacto from "./components/Contacto";
+import "fontawesome-4.7/css/font-awesome.min.css";
+import { useState, useEffect } from "react";
+import Loader from "react-loader-spinner";
 
 function App() {
+  const [isLoading, setIsLoading] = useState(false);
+  useEffect(() => {
+    console.log(isLoading);
+    setIsLoading(true);
+    console.log(isLoading);
+  });
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Loader
+        className="loader"
+        type="Puff"
+        color="#00BFFF"
+        height={100}
+        width={100}
+        visible={isLoading}
+        timeout={2000}
+      />
+      <Router>
+        <div>
+          <Navbar />
+          <Switch>
+            <Route path="/portafolio">
+              <Portfolio />
+            </Route>
+            <Route path="/sobre-mi">
+              <SobreMi />
+            </Route>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
+        </div>
+      </Router>
     </div>
   );
 }
