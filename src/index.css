@@ -7,3 +7,6 @@
 html{
   scroll-behavior: smooth;
 }
+h1,h3,h4{
+  color: #fff !important;
+}
