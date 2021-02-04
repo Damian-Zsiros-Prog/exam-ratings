@@ -4,7 +4,6 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Portfolio from './components/Portfolio';
 import SobreMi from "./components/Sobre-mi";
-import Contacto from "./components/Contacto";
 import "fontawesome-4.7/css/font-awesome.min.css";
 import { useState, useEffect } from "react";
 import Loader from "react-loader-spinner";

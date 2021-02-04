@@ -1,5 +1,5 @@
 import "./Sobre-mi.css";
-import { Link } from "react-router-dom";
+import "./Sobre-mi.script.js";
 import { useState, useEffect } from "react";
 import firebase from "firebase";
 import "../database";
@@ -22,6 +22,12 @@ const Sobre_mi = () => {
   };
   const getAllCursos = async () => {
     const cursos = await (await firebase.database().ref("cursos").get()).val();
+    for (let i = 0; i < cursos.length; i++) {
+      const element = cursos[i];
+      if (element.link_certificado == "") {
+        element.link_certificado = "#cursos";
+      }
+    }
     await setCursos(cursos);
   };
 
@@ -73,11 +79,7 @@ const Sobre_mi = () => {
                   <li className="conocimiento">
                     Frameworks: Bootstrap 4, Bootswatch
                   </li>
-                  <li className="conocimiento">
-                    Control de versiones: Git/GitHub
-                  </li>
                   <li className="conocimiento">ReactJS</li>
-                  <li className="conocimiento">PHP</li>
                 </ul>
               </div>
 
@@ -87,15 +89,15 @@ const Sobre_mi = () => {
                   <li className="conocimiento">NodeJS (Express)</li>
                   <li className="conocimiento">REST api</li>
                   <li className="conocimiento">PHP</li>
+                  <li className="conocimiento">Python</li>
+                  <li className="conocimiento">Java</li>
                 </ul>
               </div>
               <div className="categoria extra">
                 <h3 className="h3">Extras</h3>
                 <ul>
-                  <li className="conocimiento">Java</li>
                   <li className="conocimiento">Pseint</li>
                   <li className="conocimiento">C++</li>
-                  <li className="conocimiento">Python</li>
                   <li className="conocimiento">Photoshop</li>
                 </ul>
               </div>
@@ -141,31 +143,40 @@ const Sobre_mi = () => {
             </div>
             <div className="cursos" id="cursos">
               <h1>
-                <i className="fa fa-address-book icon-sec"></i> Cursos
+                <i className="fa fa-book icon-sec"></i> Cursos
               </h1>
-              <div className="cards">
+              <div className="card-cursos">
                 {cursos.map(curso => (
-                  <div class="card">
-                    <h4>{curso.titulo}</h4>
-                    <h5>
-                      {curso.año} || {curso.horas} horas
-                    </h5>
-                    <a
-                      href={curso.link_curso}
-                      className="curso_link"
-                      target="_blank"
-                    >
-                      {curso.curso}
-                    </a>
-                    <br />
-                    <a
-                      href={curso.link_lugar}
-                      className="lugar_curso"
-                      target="_blank"
-                    >
-                      Lugar: {curso.lugar}
-                    </a>
-                    <h5>Tipo: {curso.tipo}</h5>
+                  <div className="slide-container">
+                    <div className="wrapper">
+                      <div className="clash-card barbarian">
+                        <div className="clash-card__level clash-card__level--barbarian">
+                          {curso.año}
+                        </div>
+                        <a href={curso.link_curso} target="_blank">
+                          <div className="clash-card__unit-name">
+                            {curso.curso}
+                          </div>
+                        </a>
+                        <div className="clash-card__unit-description">
+                          Horas: {curso.horas}
+                          <br />
+                          Lugar: {curso.lugar}
+                          <br />
+                          Tipo: {curso.tipo}
+                        </div>
+                        <div className="clash-card__unit-stats clash-card__unit-stats--barbarian clearfix">
+                          <div className="one-third" style={{ width: "100%" }}>
+                            <a
+                              href={curso.link_certificado}
+                              style={{ color: "#fff" }}
+                            >
+                              <div className="stat-value">Ver certificado</div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>
