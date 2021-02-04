@@ -2,13 +2,12 @@ import "./Portfolio.css";
 import "../database";
 import firebase from "firebase";
 import { useState, useEffect } from "react";
+import database from '../damian-zsiros-cv-default-rtdb-export.json'
 
 const Navbar = () => {
   const [portfolioList, setPortfolioList] = useState([]);
   const getAllPortfolio = async () => {
-    const portafolio = await (
-      await firebase.database().ref("portafolio").get()
-    ).val();
+    const portafolio = database.portafolio
     await setPortfolioList(portafolio);
   };
   const handleLinks = link => {
