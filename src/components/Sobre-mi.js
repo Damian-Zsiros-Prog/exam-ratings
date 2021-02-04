@@ -1,34 +1,30 @@
 import "./Sobre-mi.css";
 import "./Sobre-mi.script.js";
 import { useState, useEffect } from "react";
-import firebase from "firebase";
-import "../database";
+import database from '../damian-zsiros-cv-default-rtdb-export.json'
 
 const Sobre_mi = () => {
   const [estudiosList, setEstudiosList] = useState([]);
   const [experienciaList, setExperienciaList] = useState([]);
   const [cursos, setCursos] = useState([]);
   const getAllEstudios = async () => {
-    const estudios = await (
-      await firebase.database().ref("estudios").get()
-    ).val();
+    const estudios = database.estudios;
     await setEstudiosList(estudios);
   };
   const getAllExperiencias = async () => {
-    const experiencias = await (
-      await firebase.database().ref("experiencia").get()
-    ).val();
+    const experiencias = database.experiencia;
     await setExperienciaList(experiencias);
   };
   const getAllCursos = async () => {
-    const cursos = await (await firebase.database().ref("cursos").get()).val();
-    for (let i = 0; i < cursos.length; i++) {
-      const element = cursos[i];
+    const cursosD = database.cursos;
+    for (let i = 0; i < cursosD.length; i++) {
+      const element = cursosD[i];
       if (element.link_certificado == "") {
         element.link_certificado = "#cursos";
       }
     }
-    await setCursos(cursos);
+    await setCursos(cursosD);
+    console.log(cursos);
   };
 
   useEffect(async () => {

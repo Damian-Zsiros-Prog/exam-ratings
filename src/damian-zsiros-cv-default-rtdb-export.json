@@ -1,0 +1,71 @@
+{
+  "contactos": [
+    {
+      "name": "correo_electronico",
+      "value": "damjeronzalez23@gmail.com"
+    },
+    {
+      "name": "whatsapp",
+      "value": "3006373865"
+    }
+  ],
+  "cursos": [
+    {
+      "año": "2020",
+      "curso": "DISEÑO Y DESARROLLO DE SITIOS WEB ACCESIBLES",
+      "horas": "40",
+      "link-lugar": "https://www.sena.edu.co/",
+      "link_certificado": "https://firebasestorage.googleapis.com/v0/b/damian-zsiros-cv.appspot.com/o/CERTIFICADO-DISE%C3%91O-Y-DESARROLLO-DE-SITIOS-WEB-ACCESIBLES.pdf?alt=media&token=03fc08f3-7f68-4d4a-8415-8c781af1683f",
+      "link_curso": "https://firebasestorage.googleapis.com/v0/b/damian-zsiros-cv.appspot.com/o/CERTIFICADO-DISE%C3%91O-Y-DESARROLLO-DE-SITIOS-WEB-ACCESIBLES.pdf?alt=media&token=03fc08f3-7f68-4d4a-8415-8c781af1683f",
+      "lugar": "SENA",
+      "tipo": "Online"
+    },
+    {
+      "año": "2020",
+      "curso": "ANALISIS PARA EL DESARROLLO MOVIL CON APP INVENTOR",
+      "horas": "40",
+      "link-lugar": "https://www.sena.edu.co/",
+      "link_certificado": "https://firebasestorage.googleapis.com/v0/b/damian-zsiros-cv.appspot.com/o/CERTIFICADO-ANALISIS-PARA-EL-DESARROLLO-MOVIL-CON-APP-INVENTOR.pdf?alt=media&token=496fac27-79fd-4e70-a2d6-91c5b523655f",
+      "link_curso": "http://oferta.senasofiaplus.edu.co/sofia-oferta/detalle-oferta.html?fm=0&fc=GKP6MKXKIok",
+      "lugar": "SENA",
+      "tipo": "Online"
+    },
+    {
+      "año": "2020",
+      "curso": "Programador web: Cookies y Sesiones en PHP",
+      "horas": "3",
+      "link-lugar": "https://www.udemy.com/",
+      "link_certificado": "",
+      "link_curso": "https://www.udemy.com/course/programador-web-php-cookies-y-sesiones/",
+      "lugar": "Udemy",
+      "tipo": "Online"
+    }
+  ],
+  "estudios": [
+    {
+      "fecha": "Febrero 2013 - Noviembre 2021",
+      "link_lugar": "https://cin.edu.co",
+      "lugar": "Colegio Integral del Norte",
+      "titulo": "Bachiller"
+    }
+  ],
+  "experiencia": [
+    {
+      "empresa": "ZION Enterprise",
+      "fecha": "Junio 2020 - Septiembre 2020",
+      "img_empresa": "https://zionenterprise.com.co/wp-content/uploads/2020/12/Logo-Wordpress-Zion.png",
+      "link_empresa": "https://zionenterprise.com.co/",
+      "puesto": "Web Developer",
+      "tareas_puesto": "En esta experiencia estuve ayudando en la terminacion y mejora de un sistema para hotel hecho en PHP MVC."
+    }
+  ],
+  "portafolio": [
+    {
+      "descripcion": "Esta es una aplicación web que califica los cuestionarios de herramientas como Google Forms.",
+      "link_code": "https://github.com/Damian-Zsiros-Prog/exam-ratings",
+      "link_image": "https://res.cloudinary.com/deel6thtb/image/upload/v1612446547/exam-ratings_tjrw5m.jpg",
+      "link_project": "http://exam-ratings.herokuapp.com/",
+      "nombre": "Exam Ratings"
+    }
+  ]
+}
